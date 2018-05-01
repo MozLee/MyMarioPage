@@ -1,0 +1,63 @@
+@import url(./normal.css);
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .info-container{
+        width: 100%;
+    }
+    .about_skill,.about_me{
+        width: 100%;
+        font-size: 12px;
+    }
+    .about_skill{
+        top:180px;
+    }
+    .cloud-group{
+        margin-top: -50px;
+        text-align: center;
+        transition: 1s;
+    }
+    .cloud-group li{
+        margin: 0 5px;
+        width: 60px;
+    }
+    .active .cloud-group{
+        margin-top: 20px;
+    }
+    .middle2{
+        bottom: 260px;
+        font-size: 18px;
+    }
+    .tree{
+        left: 250px;
+    }
+    .active .pip{
+        bottom: -26px;
+    }
+    .middle{
+        top:18%;
+    }
+}
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    .middle2{
+        bottom: 220px;
+        font-size: 18px;
+    }
+}
+

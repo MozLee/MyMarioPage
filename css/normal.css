@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    -webkit-font-smoothing:antialiased
+}
+ul li {
+    list-style: none;
+}
+.mario-bg{
+    background: #5e91fe;
+    overflow: hidden;
+    
+}
+.cloud-group{
+    text-align:  center;
+    margin-top: -146px;
+    transition: 1s;
+}
+.active .cloud-group{
+    margin-top: 10px;
+    
+}
+.cloud-group li img{
+    width: 100%;
+    height: auto;
+}
+.cloud-group li{
+    display: inline-block;
+    margin: 10px 30px 0 30px;
+}
+.middle{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top:15%;
+    left: -100%;
+    text-align: center;
+    transition: 1.5s;
+}
+.active .middle{
+    left: 0;
+}
+.middle2{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 100%;
+    bottom: 200px;
+    color: #fff;
+    font-size: 22px;
+    transition: 1.5s;
+    font-weight: bold;
+}
+.middle2 p{
+    margin-top: 10px;
+}
+.active .middle2{
+    left: 0;
+}
+.info{
+    width: 80%;
+    max-width: 400px;
+    min-width: 300px;
+    margin:  0 auto;
+}
+.info p{
+    cursor: pointer;
+}
+.band img{
+    width: 80%;
+    max-width: 700px;
+    min-width: 320px;
+}
+.bottom{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom:-70px;
+    transition: 1s
+}
+.land{
+    height: 70px;
+    width: 100%;
+    position: relative;
+    background: url('../images/mario/img/map-land.png')
+}
+.active .bottom{
+    bottom: 0;
+}
+.mushroom-model{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom:70px;
+    right: 0;
+    background: url('../images/mario/img/largenMushroom.png');
+    z-index: 9998;
+}
+.mario-model{
+    width: 32px;
+    height: 64px;
+    position: relative;
+    left:-32px;
+    z-index: 9999;
+}
+.mario-lg-run-r{
+    background: url('../images/mario/img/bigPerson.gif') no-repeat bottom;        
+}
+.mario-lg-stop-r{
+    background: url('../images/mario/img/bigPerson.png') no-repeat bottom;        
+}
+.mario-lg-run-l{
+    background: url('../images/mario/img/bigPersonL.gif') no-repeat bottom;        
+}
+.mario-lg-stop-l{
+    background: url('../images/mario/img/bigPersonL.png') no-repeat bottom;        
+}
+.mario-bl-run-r{
+    background: url('../images/mario/img/bulletPerson.gif') no-repeat bottom;        
+}
+.mario-bl-stop-r{
+    background: url('../images/mario/img/bulletPerson.png') no-repeat bottom;        
+}
+.mario-bl-run-l{
+    background: url('../images/mario/img/bulletPersonL.gif') no-repeat bottom;        
+}
+.mario-bl-stop-l{
+    background: url('../images/mario/img/bulletPersonL.png') no-repeat bottom;        
+}
+.mario-run-r{
+    background: url('../images/mario/img/basePerson.gif') no-repeat bottom;    
+}
+.mario-stop-r{
+    background: url('../images/mario/img/basePerson.png') no-repeat bottom;    
+}
+.mario-run-l{
+    background: url('../images/mario/img/basePersonL.gif') no-repeat bottom
+}
+.mario-stop-l{
+    background: url('../images/mario/img/basePersonL.png')no-repeat bottom
+}
+.mario-jump-l{
+    background: url('../images/mario/img/bulletPersonUpL.png')
+}
+.mario-jump-r{
+    background: url('../images/mario/img/bulletPersonUp.png')
+}
+
+.hill{
+    width: 160px;
+    height: 71px;
+    position: absolute;
+    bottom: -1px;
+    background: url('../images/mario/hill1.png');
+    background-size: contain;
+    transition: 1s;
+    transition-delay: .2s;
+}
+.active .hill{
+    bottom: 70px;    
+}
+.hill:nth-child(3){
+    left: 400px;
+}
+.tree{
+    width: 129px;
+    height: 33px;
+    position: absolute;
+    bottom: 0px;
+    left: 600px;
+    background: url('../images/mario/tree2.png');
+    background-size: contain;
+    transition: 1s;
+    transition-delay: .2s;
+}
+.active .tree{
+    bottom: 70px;    
+}
+.pip{
+    width: 64px;
+    height: 96px;
+    position: absolute;
+    bottom: -26px;
+    right: 200px;
+    background: url('../images/mario/pip.png');
+    background-size: contain;
+    transition: 1s;
+    transition-delay: .2s; 
+}
+.active .pip{
+    bottom: 70px;    
+            
+}
+.info i{
+    margin-right: 10px;
+    vertical-align: bottom;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+.mushroom{
+    background: url('../images/mario/img/largenMushroom.png')
+}
+.about_me{
+    width: 50%;
+    position: absolute;
+    left: -100%;
+    padding:20px;
+    transition: 2s;
+}
+.active .about_me{
+    left: 0;
+}
+.about_skill{
+    width: 50%;
+    position: absolute;
+    right: -100%;
+    transition: 2s;
+    padding: 20px;
+}
+.active .about_skill{
+    right: 0;
+}
+.info-container{
+    height: auto;
+    width: 700px;
+    margin:  0 auto;
+    color: #fff;
+    position: relative;
+    font-size: 16px;
+    line-height: 30px;
+}
+.about_skill li{
+    width: 100%;
+    text-align: center;
+}
+.about_skill li p{
+    width: 30%;
+    display: inline-block;
+    text-align: right   
+}
+.about_skill li div{
+    width: 70%;
+    display: inline-block;
+    text-align: left;
+    padding-left: 14px;
+}
+.about_skill i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-size: contain;
+    margin-left: 5px;
+}
+.ico-mushroom{
+    background: url('../images/mario/mushroom.gif')
+}
+.ico-gold{
+    background: url('../images/mario/gold.gif')
+}
+.ico-flower{
+    background: url('../images/mario/flower.gif')
+}
+.ico-bullet{
+    background: url('../images/mario/bullet.gif')
+}
+
+.find_me{
+    width: 80%;
+    max-width: 800px;
+    height: 320px;
+    border: 1px solid #fff;
+    position: relative;
+    top:50%;
+    margin: auto;
+    margin-top: -320px;
+    transition: 1.5s linear;
+    transition-delay: 2s;
+    opacity: 0;
+}
+.find_me h2{
+    text-align: center;
+    color: #fff;
+}
+.active .find_me{
+    opacity: 1;
+}
+.find_me_wall{
+    width: 100%;
+    height: 32px;
+    background: url('../images/mario/img/map-stone.png');
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.ask{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    z-index: 99;
+    bottom: 0;   
+    color: #fff; 
+}
+.ask-ing{
+    background: url('../images/mario/map-ask.gif');    
+}
+.ask-done{
+    background: url('../images/mario/img/map-nothing.png');
+}
+/* .github::after{
+    content: 'GitHub';
+    width: 100px;
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: -34px;
+    text-align: center;
+}
+.blog::after{
+    content: 'Blog';
+    width: 100px;
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: -34px;
+    text-align: center;
+} */
+.find_me_cont{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
