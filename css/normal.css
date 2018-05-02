@@ -87,6 +87,22 @@ ul li {
     position: relative;
     background: url('../images/mario/img/map-land.png')
 }
+.land .copyright{
+    width: 100%;
+    position: absolute;
+    background: rgba(228, 76, 0, .9);
+    height: 32px;
+    left: 0;
+    bottom: 0px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.copyright i{
+    margin-right: 10px;
+}
 .active .bottom{
     bottom: 0;
 }
@@ -273,7 +289,6 @@ ul li {
     width: 80%;
     max-width: 800px;
     height: 320px;
-    border: 1px solid #fff;
     position: relative;
     top:50%;
     margin: auto;
@@ -333,4 +348,40 @@ ul li {
     width: 100%;
     height: auto;
     padding: 20px;
+    display: none;
+}
+.find_me_cont h2{
+    font-size: 18px;
+    padding: 10px;
+    width: 160px;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+.find_me_cont a {
+     text-decoration: none;
+     margin-top: 20px;
+     width: 24%;
+     display: block;
+     margin-right: 1%;
+     float: left;
+     text-align: center;
+     line-height: 40px;     
+     padding: 10px;
+     color: #fff;
+     transition: 1s;
+
+
+}
+.find_me_cont a:hover{
+    /* background: rgba(255, 255, 255, .6); */
+    /* background: url('../images/mario/img/map-nothing.png'); */
+    background: #c75100;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, .4);
+}
+.find_me_cont a i{
+    margin-right: 10px;
+}
+#tips{
+    position: absolute;
+    top: 120px;
 }

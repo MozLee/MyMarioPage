@@ -108,8 +108,8 @@ $(function () {
         stopTouch();
         $(".mario-model")
           .eq(nextIndex - 1)
-          .removeClass("mario-bl-run-l")
-          .addClass("mario-bl-run-r")
+          .removeClass()
+          .addClass("mario-model mario-bl-run-r")
           .animate({
               left: "45%"
             },
@@ -146,6 +146,7 @@ function startTouch() {
   $('.section').off();
 }
 $(function () {
+  tips = $('#tips')
   $.fn.fullpage.setAllowScrolling(false);
   setTimeout(function () {
     $.fn.fullpage.setAllowScrolling(true);
@@ -159,10 +160,10 @@ $(function () {
   function showTab(index) {
     $('.find_me_cont').each(function(i,item){
       console.log(index);
-      $(item).hide();            
+      $(item).slideUp('slow','swing');            
       if(i==index){
         console.log(123);
-        $(item).show();
+        $(item).slideDown('slow','swing');
       }
     })
   }
@@ -171,7 +172,8 @@ $(function () {
   let mario = $('.final-mario')
   let wall_L = $('.find_me').offset().left;
   let postion = 1.5; //记录位置
-  let asks = $('.ask')
+  let asks = $('.ask');
+  let isClick = false;//防止连续点击
   // console.log('this',wall_L);
   $('.ask').each(function (i, item) {
     $(this).attr('index', i);
@@ -185,6 +187,9 @@ $(function () {
       })
     }
   }).click(function (ev) {
+    tips.fadeOut();
+    if(isClick) return;
+    isClick = true;
     currPostion = $(this).attr('index')
     let wall_b = $(window).height() - $('.find_me')[0].getBoundingClientRect().bottom - 64 - 70;
     //判断方向 切换人物模型
@@ -202,7 +207,8 @@ $(function () {
                 bottom:0
               },500,function(){//跳跃落地
                  mario.removeClass().addClass('mario-model final-mario mario-bl-stop-r');
-                 showTab(currPostion)                
+                 showTab(currPostion);
+                 isClick = false;                                                                                                 
               })
             })
         })
@@ -220,7 +226,8 @@ $(function () {
                 bottom:0
               },500,function(){//跳跃落地
                  mario.removeClass().addClass('mario-model final-mario mario-bl-stop-l') 
-                 showTab(currPostion)                                                
+                 showTab(currPostion);
+                 isClick = false;                                                                
               })
             })
         })
