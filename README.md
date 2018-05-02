@@ -5,6 +5,7 @@
 [abc]:https://github.com/MozLee/MyMarioPage/blob/master/README/1.gif
 [gif2]:https://github.com/MozLee/MyMarioPage/blob/master/README/2.gif
 ![gif1][abc]
+<br>
 ![gif2][gif2]
 ![1][1]
 ![2][2]
